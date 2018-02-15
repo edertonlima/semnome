@@ -1,0 +1,360 @@
+@media all and (max-width: 1200px){
+	#igrejas-parceiras {
+		height: auto;
+		min-height: auto;
+
+		.mask-content-item {
+			height: auto;
+
+			.table, .table-cell {
+				margin: 0;
+				display: block;
+			}
+		}
+
+		.txt-sobre {
+			padding: 100px 40px;
+
+			h4 {
+				font-size: 3rem;
+				line-height: 3.5rem;
+			}
+
+			.list-igrejas {
+				margin: 50px 0 0;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1000px){
+	h4 {
+		font-size: 1.225rem;
+		line-height: 1.75rem;
+	}
+
+	p {
+		font-size: .875rem;
+		line-height: 1.225rem;
+	}
+
+	.sobre-home {
+		.txt-sobre {
+			h4 {
+				margin: 5px 0 0px
+			}
+		}
+
+		&.item-mini {
+			.item-sobre {
+				h4 {
+					font-size: 2rem;
+					line-height: 1.5rem;
+				}
+			}
+		}
+
+		&.sobre-btn-det {
+			padding: 50px 15px;
+		}
+	}
+
+	.projetos .list-projeto .cont-proj .box-cont-proj p {
+		max-height: 102px;
+	}
+
+	.envolva-se {
+		height: auto;
+		min-height: 0!important;
+
+		h4 {
+			font-size: 2rem!important;
+			line-height: 1.5rem!important;
+		}
+
+		.col-5 {
+			width: 100%!important;
+			height: auto!important;
+
+			h4 {
+				margin-top: 15px;
+			}
+		}
+
+		.col-7 {
+			width: 100%!important;
+		}
+
+		.item-sobre:not(.active) {
+			border: 1px solid #ffffff;
+		}
+	}
+}
+
+@media all and (max-width: 900px){
+	.envolvase {
+		.doacao {
+			li {
+				width: 100%;
+			}
+		}
+	}
+
+	.projetos {
+		.list-projeto {
+			.item-proj {
+				max-width: 500px;
+				margin: 0px auto 0px;
+				float: none;
+				display: block;
+
+				&:nth-child(2n+1) {
+					text-align: left;
+				}
+
+				.col-6 {
+					width: 100%;
+
+					&.cont-proj {
+						margin-bottom: 40px;
+						height: auto;
+						background-color: rgba($amarelo,0.75);
+
+						.box-cont-proj {
+							padding: 20px 0;
+						}
+					}
+				}
+
+				&:last {
+					.col-6 {
+						&.cont-proj {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.treinamentos {
+		.cont-treinamentos {
+			h4 {
+				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 730px){
+	.idiomas {
+		display: none;
+		top: 85px;
+		z-index: 9999;
+		margin: 0 0 0 -103px;
+		width: 206px;
+		left: 50%;
+
+		&.active {
+			display: block;
+		}
+	}
+
+	h1 {
+		max-width: 130px;
+	}
+
+	.container {
+		padding: 0 20px;
+	}
+
+	.header {
+		.logo-mevam {
+			img {
+				max-height: 59px;
+			}
+		}
+	}
+
+	.menu-mobile {
+		top: 8px;
+		right: 110px;
+	}
+
+	.nav {
+		width: 100%;
+		top: 75px;
+		padding-top: 55px;
+
+		ul {
+			li {
+				margin-bottom: 10px;
+
+				a {
+					font-size: 1.5rem;
+					line-height: 2rem;
+				}
+			}
+		}
+	}
+
+	.sobre-home {
+		&.item-mini {
+			.item-sobre {
+				width: 50%;
+				height: 70px !important;
+
+				.button {
+					display: none;
+				}
+			}
+		}
+
+		&.sobre-btn-det {
+			padding: 5px;
+			max-width: 450px;
+			margin: 20px auto 0;
+
+			img {
+				width: 100%;
+				margin: 15px 0 15px;
+			}
+
+			.txt-sobre {
+				margin-bottom: 15px;
+			}
+
+			.col-4, .col-8 {
+				width: 100%;
+			}
+		}
+	}
+
+	.treinamentos {
+		height: auto;
+		min-height: 0px;
+
+		.box-treinamentos {
+			height: auto;
+			padding: 25px 0;
+
+			.slide-treinamento {
+				height: auto;
+			}
+		}
+
+		.img-treinamento {
+			
+		}
+
+		.cont-treinamentos {
+
+		}
+
+		.col-6 {
+			width: 100%;
+		}
+	}
+
+	.treinamentos .img-treinamentos {
+		height: 40vh!important;
+	}
+
+	.treinamentos .cont-treinamentos {
+		height: auto!important;
+	}
+
+	.footer {
+		height: auto!important;
+		min-height: 0!important;
+
+		.mask {
+			height: auto!important;
+			min-height: 0!important;
+			padding-bottom: 20px !important;
+		}
+
+		.col-6 {
+			width: 100%;
+			text-align: center;
+
+			h1 {
+				float: none;
+				display: block;
+				margin: 30px auto;
+				max-width: 200px;
+			}
+		}
+
+		.box-info-contato .info-contato .item {
+			width: 100%;
+		}
+
+		.box-info-contato .info-contato .item span {
+			text-align: center;
+		}
+
+		.redes {
+			width: 100%;
+		}
+	}
+
+	.page {
+		.content-post {
+			.col-4, .col-8 {
+				width: 100%;
+			}
+
+			.col-4 {
+				margin-bottom: 20px;
+			}
+		}
+
+		.content-post {
+			.sobre-home {
+				display: block;
+				max-width: 500px;
+				margin: 0 auto;
+
+				.col-4 {
+					img {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+
+	.page .box-content.header-page {
+		height: 100px;
+
+		.mask {
+			height: 100px;
+
+			.container {
+				height: 100px;
+
+				div {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 500px){
+	.sobre-home {
+		&.item-mini {
+			.item-sobre {
+				width: 100%;
+				height: 70px !important;
+			}
+		}
+	}
+
+	.envolva-se {
+		.item-sobre:not(.active) {
+			width: 100%;
+		}
+	}
+}

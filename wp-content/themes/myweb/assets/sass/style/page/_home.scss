@@ -1,0 +1,338 @@
+
+.sobre {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.mask {
+		background-color: rgba($amarelo,0.5);
+		min-height: 100vh;
+
+		.table {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+	}
+}
+
+.sobre-home {
+	padding: 20px;
+	margin: 0;
+	background-color: rgba(#ffffff,0.75);
+
+	&.box-item-sobre {
+		[class*="col-"] {
+			padding: 0;
+		}
+	}
+
+	.txt-sobre {
+		&.col8 {
+			padding-left: 60px;
+		}
+
+		h4 {
+			margin: 10px 0 20px;
+		}
+
+		p {
+			
+		}
+	}
+
+	.item-sobre {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		overflow: hidden;
+		cursor: pointer;
+		position: relative;
+
+		.titulo {
+			color: $verde;
+			font-family: $satisfy;
+		}
+
+		&:hover, &.active {
+			.mask-hover {
+				left: 0;
+			}
+		}
+
+		.mask-hover {
+			height: 100%;
+			display: table;
+			width: 101%;
+			text-align: center;
+			padding: 20px;
+			background-color: rgba($amarelo,0.75);
+			position: relative;
+			left: -100%;
+			overflow: hidden;
+			@include animacao;
+
+			.box-hover {
+				display: table-cell;
+				vertical-align: middle;
+				position: relative;
+				left: -1%;
+			}
+
+			h4 {
+				font-size: 4rem;
+				line-height: 4rem;
+			}
+
+			.button {
+				border: none;
+				margin-top: 10px;
+
+				&:hover {
+					background-color: transparent;
+					color: $verde;
+
+					i {
+						color: $verde;
+					}
+				}
+			}
+		}
+
+		&.active {
+			overflow: visible;
+			&:after {
+				content: '';
+				position: absolute;
+				height: 10px;
+				background-color: $verde;
+				width: 100px;
+				bottom: -5px;
+				left: 50%;
+				margin-left: -50px;
+				z-index: 9;
+			}
+		}
+	}
+
+	&.item-mini {
+		.item-sobre {
+			.mask-hover {
+				left: 0;
+			}
+
+			h4 {
+				font-size: 3rem;
+				line-height: 2rem;
+				color: #000;
+			}
+
+			&:hover {
+				.mask-hover {
+					background-color: rgba($amarelo,0.85);
+
+					.box-hover {
+						h4 {
+							color: $verde;
+						}
+					}
+				}
+			}
+
+			&.active {
+				h4 {
+					color: $verde;
+				}
+				.mask-hover {
+					background-color: rgba($amarelo,1);
+				}
+				.button {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.sobre-btn-det {
+		display: none;
+		padding: 100px 30px;
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.item-sobre-content {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+
+	.mask-content-item {
+		background-color: rgba($amarelo,0.3);
+		height: 100vh;
+
+		.txt-sobre {
+			background-color: rgba($amarelo,0.75);
+			padding: 40px;
+			
+			span, h4, p {
+				//color: #ffffff;
+			}
+
+			&.igrejas-parceiras {
+				position: relative;
+				//padding: 100px;
+
+				h4 {
+					color: $verde;
+					font-family: $satisfy;
+					font-size: 4rem;
+					display: block;
+					text-align: center;
+				}
+
+				.list-igrejas {
+					overflow: hidden;
+					margin: 100px 0 0;
+					.owl-item {
+						float: left;
+						text-align: center;
+						img {
+							display: inline-block;
+							max-height: 100px;
+							width: auto;
+						}
+					}
+					.owl-dots {
+						display: none;
+					}
+					.owl-nav {
+						position: absolute;
+						z-index: 0;
+						left: 0;
+						top: 280px;
+						width: 100%;
+
+						.owl-prev, .owl-next {
+							position: absolute;
+							z-index: 999;
+							cursor: pointer;
+							@include animacao;
+
+							i {
+								color: $verde;
+								font-size: 2rem;
+							}
+
+							&.disabled {
+								opacity: .3;
+								cursor: default;
+							}
+						}
+
+						.owl-prev {
+							left: 40px;
+						}
+
+						.owl-next {
+							right: 40px;
+						}
+					}
+				}
+
+				.button {
+					display: block;
+					margin: 80px auto 0;
+					width: 275px;
+					background-color: $verde;
+					color: #ffffff;
+
+					i {
+						color: #ffffff;
+					}
+
+					&:hover {
+						background-color: transparent;
+						color: $verde;
+
+						i {
+							color: $verde;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#ancor-sobre {
+	position: relative;
+	top: -200px;
+	z-index: 0;
+	width: 10px;
+	height: 10px;
+	background-color: red;
+}
+
+.envolva-se {
+	.container {
+		max-width: 95%; 
+	}
+
+	.table {
+		height: 100vh;
+		margin: 0;
+	}
+
+	.item-sobre {
+		&:not(.active){
+			height: 30vh;
+		}
+
+		&.active {
+			height: 60vh;
+		}
+
+		.mask-hover {
+			width: 100%;
+			left: 0;
+			background-color: rgba($amarelo,0.75);
+
+			h4 {
+				color: #000
+			}
+		}
+
+		&:hover {
+			.mask-hover {
+				background-color: rgba($amarelo,0.9);
+
+				h4 {
+					color: $verde;
+				}
+			}
+		}
+	}
+
+	p {
+		padding: 10px 20px;
+	}	
+}
+
+#igrejas-parceiras {
+	display: block;
+	margin-top: 50px;
+
+	.mask-content-item {
+		background-color: rgba($amarelo,0.75);
+	}
+
+	.txt-sobre {
+		background-color: rgba(#ffffff,0.75);
+	}
+}

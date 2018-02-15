@@ -1,0 +1,90 @@
+.envolvase {
+	margin-top: 50px;
+
+	.mask {
+		padding: 100px 0;
+		height: auto;
+		min-height: 0;
+		background-color: rgba($amarelo,0.8);
+	}
+
+	.doacao {
+		margin: 50px 0;
+		float: left;
+		text-align: center;
+		width: 100%;
+
+		li {
+			float: left;
+			width: 20%;
+			height: 150px;
+			padding: 0 4px;
+			cursor: pointer;
+			@include box-sizing; 
+
+			.cont {
+				background-color: #ffffff;
+				padding: 10px;
+				display: table;
+				width: 100%;
+				height: 100%;
+				@include animacao;
+				@include box-sizing; 
+			}
+
+			&.button-ofertar {
+
+			}
+
+			.middle {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			h2, span {
+				display: block;
+			}
+
+			span, input {
+				color: #000;
+				font-size: 2rem;
+				font-weight: 600;
+			}
+
+			input {
+				text-align: center;
+				width: 100%;
+				background: transparent;
+
+				&::-webkit-input-placeholder {
+					color: #000;
+					opacity: 1;
+				}
+
+				&:-moz-placeholder {
+					color: #000;
+					opacity: 1;
+				}
+
+				&::-moz-placeholder {
+					color: #000;
+					opacity: 1;
+				}
+
+				&:-ms-input-placeholder {  
+					color: #000;
+					opacity: 1;
+				}
+			}
+
+			&.active, &:hover {
+				.cont {
+					background-color: $amarelo;
+				}
+			}
+		}
+	}
+	&.envolvase-home {
+		margin: 0;
+	}
+}

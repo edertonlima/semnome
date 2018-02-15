@@ -1,0 +1,223 @@
+form {
+	width: 100%;
+	@include clear();
+
+	input, textarea {
+		max-width: 100%;
+		width: 100%;
+		background-color: #ffffff;
+		font-size: .8rem;
+		color: $cor-txt;
+		margin-bottom: 15px;
+		border: 1px solid $cinza-escuro;
+		font-weight: $light;
+
+		@include placeholder {
+			opacity: .8;
+			color: $cor-txt;
+			font-weight: $light;
+		}
+	}
+
+	input[type='text'] {
+		line-height: 34px;
+		height: 34px;
+		padding: 0 10px;
+		@include box-sizing;
+	}
+
+	textarea {
+		padding: 10px;
+		height: 100px;
+		resize: vertical;
+		@include box-sizing;
+	}
+}
+
+fieldset {
+	&:first-child {
+		margin: 0;
+	}
+
+	&.erro {
+		input, textarea {
+			border-color: red;
+
+			&::-webkit-input-placeholder {
+				color: red;
+			}
+
+			&:-moz-placeholder {
+				color: red; 
+			}
+
+			&::-moz-placeholder {
+				color: red;
+			}
+
+			&:-ms-input-placeholder {  
+				color: red;
+			}
+		}
+	}
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #4778d9!important;
+}
+
+input[type='submit'], .button {
+	display: inline-block;
+	width: auto;
+	height: 34px;
+	line-height: 33px;
+	color: $verde;
+	font-weight: $regular;
+	font-size: .7rem; 
+	text-align: center;
+	padding: 0px 12px;
+	border: 1px solid $verde;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	@include animacao;
+
+	i {
+		color: $verde;
+		padding-left: 5px;
+		@include animacao;
+	}
+
+	&:hover {
+		background-color: darken($verde, 10%);
+		color: #ffffff;
+
+		i {
+			color: #ffffff;
+		}
+	}
+
+	&.enviar {
+		background-color: $verde;
+		color: #ffffff;
+
+		i {
+			color: #ffffff;
+		}
+
+		&:hover {
+			background-color: darken($verde, 10%);
+		}
+	}
+
+	&.ofertar {
+		background-color: lighten($verde, 10%);
+		line-height: 150px;
+		font-size: 1.5rem;
+		color: #ffffff;
+		display: block;
+		height: 150px;
+		border: none;
+
+		i {
+			color: #ffffff;
+		}
+
+		&:hover {
+			background-color: $verde;
+		}
+	}
+
+
+	&.btn-igreja {
+		background-color: $verde;
+		color: #ffffff;
+
+		i {
+			color: #ffffff;
+		}
+
+		&:hover {
+			background-color: darken($verde, 10%);
+		}
+	}
+}
+
+.select {
+	overflow: hidden;
+	background-color: #ffffff;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 0 0 10px;
+	margin-top: 10px;
+	display: block;
+	position: relative;
+	@include box-sizing();
+
+	i {
+		position: absolute;
+		top: 14px;
+		color: #9f9fa0;
+	}
+
+	select {
+		width: 92%;
+		//padding-right: 135px;
+		background-color: transparent;
+		font-weight: $light;
+		font-size: .8rem;
+		box-sizing: content-box;
+		position: relative;
+		z-index: 99;
+		cursor: pointer;
+		margin-left: 12px;
+		letter-spacing: .5px;
+		text-transform: uppercase;
+		//font-style: italic;
+
+		option {
+			font-weight: $light;
+			font-size: .7rem;
+			letter-spacing: .5px;
+			text-transform: uppercase;
+		}
+
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		//text-indent: 1px;
+		text-overflow: '';
+	}
+
+	&:after {
+		content: "\f107";
+		position: absolute;
+		right: 13px;
+		top: 12px;
+		font: normal normal normal 36px/1 FontAwesome;
+		cursor: pointer;
+		height: 15px;
+		line-height: 15px;
+		z-index: 0;
+		color: #9f9fa0;
+	}
+}
+
+/*input::-webkit-input-placeholder, input:-moz-placeholder, input::-moz-placeholder, input:-ms-input-placeholder {  
+	opacity: 1;	
+}
+
+input::-webkit-input-placeholder {
+    opacity: 0;
+}
+*/
+
+.msg-form {
+	text-align: center;
+	font-size: .875rem;
+	line-height: 1rem;
+	margin: 0;
+
+	&.erro, &.ok {
+		margin-bottom: 20px;
+	}
+}

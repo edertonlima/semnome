@@ -1,0 +1,86 @@
+.nav {
+	width: 100%;
+	height: auto;
+	@include animacao;
+
+	ul {
+		text-align: center;
+		margin: 20px 0;
+
+		li {
+			padding: 0 10px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 80px;
+			white-space: nowrap;
+
+			&.logo {
+				width: auto;
+			}
+
+			a {
+				font-size: 1.225rem;
+				line-height: 1.225rem;
+				@include animacao;
+
+				&:hover {
+					color: $cor-principal;
+				}
+			}
+
+			&.active {
+				a {
+					color: $cor-principal;
+				}
+			}
+		}
+	}
+
+	&.active {
+		display: block;
+		//box-shadow: 0px 0px 2px;
+	}
+
+	.menu-mobile {
+		color: $verde;
+		top: 30px;
+		right: 50px;
+
+		&:hover {
+			color: $cinza-escuro;
+		}
+
+		&.active {
+			color: $verde;
+
+			&:hover {
+				color: $cinza-escuro;
+			}
+		}
+	}
+}
+
+/* menu mobile */
+.menu-mobile {
+	color: $verde;
+	display: none;
+	z-index: 9999;
+	position: absolute;
+	cursor: pointer;
+	font-size: 2.5rem;
+	top: 18px;
+	right: 170px;
+	@include animacao;
+
+	&.active {
+		color: $cinza-escuro;
+
+		&:hover {
+			color: $cinza-escuro;
+		}
+	}
+
+	&:hover {
+		color: $cinza-escuro;
+	}
+}
