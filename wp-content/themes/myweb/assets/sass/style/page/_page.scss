@@ -12,7 +12,7 @@
 			min-height: 0;
 
 			.mask {
-				background-color: rgba($amarelo,0.5);
+				background-color: rgba(#000000,0.5);
 				min-height: 0;
 				height: 30vh;
 
@@ -20,29 +20,15 @@
 					height: 30vh;
 
 					div {
-						bottom: 0;
-						line-height: 90px;
+						line-height: 30vh;
 						display: block;
 						text-align: center;
-						position: absolute;
 						width: 100%;
 
 						span {
 							font-size: 60px;
-							color: $verde;
-							top: 11px;
-							position: relative;
-							font-family: "Satisfy",sans-serif;
-							//text-transform: lowercase;
-							display: inline-block;
-							padding: 0 50px;
-						}
-
-						&:before, &:after {
-							content: '';
-							background-color: $verde;
-							width: 150px;
-							height: 2px;
+							color: #ffffff;
+							font-family: $raleway;
 							display: inline-block;
 						}
 					}
@@ -51,8 +37,12 @@
 		}
 
 		.content-post {
-			h4 {
-				margin-bottom: 15px;
+			h2 {
+				font-size: 2rem;
+				line-height: 2rem;
+				max-width: 70%;
+				margin-right: auto;
+				margin-left: auto;
 			}
 
 			.img-ico-cont {

@@ -170,7 +170,7 @@ function paginacao() {
 			],
 			"cptp_permalink_structure" => "/%postname%/",
 			'menu_position'     =>  21,
-			'supports'          =>  array('title'),
+			'supports'          =>  array('title','thumbnail','excerpt','editor'),
 			'has_archive'       =>  true,
 			'menu_icon' => 'dashicons-admin-tools'
 		));

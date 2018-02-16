@@ -1,63 +1,95 @@
-	<footer class="box-content no-padding footer" style="display: none; background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/img5.jpg');">
-		<div class="mask">
-			<div class="container table">
-				<div class="table-cell">
-					<div class="contanier">
-						<div class="row">
+<section class="box-content no-height destaque">
+	<div class="container">
+		
+		<div class="row">
+			<div class="col-12">
 
-						<div class="col-6">
-							<h1>
-								<a href="<?php echo get_home_url(); ?>" title="<?php the_field('titulo', 'option'); ?>">
-									<img src="<?php the_field('logo_header', 'option'); ?>" alt="<?php the_field('titulo', 'option'); ?>">
-								</a>
-							</h1>
-						</div>
+				<h2>Precisa de um orçamento personalizado?</h2>
+				<p class="center">Temos a solução ideal para o que você precisa. Diga-nos o que você precisa e um de nossos técnicos entrarão em contato para ajuda-lo no que for preciso.</p>
+				<a href="javascript:" class="button send-box-destaque">
+					<i class="fa fa-send" aria-hidden="true"></i>
+					solicitar orçamento
+				</a>
 
-						<div class="col-6">
-							<h2 class="">contato</h2>
-							<h4 class="">Em caso de dúvidas, fale conosco</h4>
-
-							<div class="box-info-contato">
-								<div class="info-contato info-email">
-									<div class="item">
-										<span class="det-item">
-											<i class="fa fa-envelope" aria-hidden="true"></i>
-											<a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
-										</span>
-									</div>
-								</div>
-
-								<div class="info-contato info-tel">
-									<div class="item">
-										<span class="det-item"> <i class="fa fa-phone" aria-hidden="true"></i><?php the_field('telefone_1', 'option'); ?></span>
-									</div>
-								</div>
-							</div>
-
-							<?php if( have_rows('redes_sociais','option') ): ?>
-								<div class="redes">						
-									<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
-										<a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
-											<?php the_sub_field('icone','option'); ?>
-										</a>
-									<?php endwhile; ?>
-								</div>
-							<?php endif; ?>
-						</div>
-
-					</div>
-					</div>
-				</div>
 			</div>
+		</div>
+	</div>
+</section>
+
+
+<footer class="box-content no-height no-padding footer">		
+	<div class="container">
+		
+		<div class="contanier">
+
+			<p><i class="fa fa-copyright" aria-hidden="true"></i> <?php echo date('Y').' '; the_field('titulo', 'option'); ?> - Todos os direitos reservados.</p>
+
+			<?php if( have_rows('redes_sociais','option') ): ?>
+				<div class="redes">						
+					<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+						<a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
+							<?php the_sub_field('icone','option'); ?>
+						</a>
+					<?php endwhile; ?>
+				</div>
+			<?php endif; ?>
+			
+		</div>
+		
+	</div>
+</footer>
+
+<div class="bg-modal" id="modal-orcamento">
+	<div class="box-modal">
+		<div class="modal-conteudo">
+
+			<i class="fa fa-times close-modal" aria-hidden="true"></i>
+		
+			<h2>Solicite um orçamento agora!</h2>
+			<form class="orcamento-unit row">
+				<fieldset class="col-6">
+					<input type="text" name="" placeholder="Nome">
+				</fieldset>
+				<fieldset class="col-6">
+					<input type="text" name="" placeholder="E-mail">
+				</fieldset>
+				<fieldset class="col-6">
+					<select>
+						<option>Idioma Original</option>
+						<option>Espanhol</option>
+						<option>Inglês</option>
+						<option>Português</option>
+					</select>
+				</fieldset>
+				<fieldset class="col-6">
+					<select>
+						<option>Idioma para Tradução</option>
+						<option>Espanhol</option>
+						<option>Inglês</option>
+						<option>Português</option>
+					</select>
+				</fieldset>
+				<fieldset class="col-12">
+					<textarea placeholder="Detalhe do orçamento"></textarea>
+				</fieldset>
+				<fieldset class="col-12">
+					<button class="button send-box-form"><i class="fa fa-send" aria-hidden="true"></i> Enviar</button>
+				</fieldset>
+			</form>
 
 		</div>
-	</footer>
+	</div>
+</div>
 
 </body>
 </html>
 
 <script type="text/javascript">
 	jQuery(document).ready(function(){
+
+		jQuery('.send-box-destaque').click(function(){
+			jQuery('#modal-orcamento').css('display','table');
+		});
 
 		/*
 		jQuery('.contato-foto').height(jQuery('.contato-info').height());

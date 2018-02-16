@@ -2,35 +2,53 @@ form {
 	width: 100%;
 	@include clear();
 
-	input, textarea {
+	input, textarea, select {
 		max-width: 100%;
 		width: 100%;
 		background-color: #ffffff;
-		font-size: .8rem;
+		font-size: 1rem;
 		color: $cor-txt;
 		margin-bottom: 15px;
-		border: 1px solid $cinza-escuro;
-		font-weight: $light;
+		overflow: hidden;
 
 		@include placeholder {
-			opacity: .8;
+			opacity: 1;
 			color: $cor-txt;
-			font-weight: $light;
+		}
+	}
+
+	select {
+		height: 34px;
+		padding: 0 17px;
+
+		option {
+			font-size: 1rem;
 		}
 	}
 
 	input[type='text'] {
 		line-height: 34px;
 		height: 34px;
-		padding: 0 10px;
+		padding: 0 20px;
 		@include box-sizing;
 	}
 
 	textarea {
-		padding: 10px;
-		height: 100px;
+		padding: 20px;
+		height: 150px;
 		resize: vertical;
 		@include box-sizing;
+	}
+
+	&.orcamento-unit {
+		max-width: 900px;
+		margin: 65px auto 0!important;
+	}
+
+	&.contato {
+		input, textarea {
+			border: 1px solid $cinza;
+		}
 	}
 }
 
@@ -98,47 +116,170 @@ input[type='submit'], .button {
 	}
 
 	&.enviar {
-		background-color: $verde;
+		display: block;
 		color: #ffffff;
+		height: auto;
+		width: 180px;
+		margin: 10px auto 0;
+		font-size: .8rem;
+		border-color: $cor-principal;
+		background-color: $cor-principal;
+		padding: 0;
+		line-height: 45px;
+		cursor: pointer;
 
 		i {
+			padding: 0 10px 0 0;
+			position: relative;
+			top: 2px;
 			color: #ffffff;
+			font-size: 1.225rem;
 		}
 
 		&:hover {
-			background-color: darken($verde, 10%);
+			color: $cor-principal;
+			background-color: #ffffff;
+			border-color: $cor-principal;
+
+			i {
+				color: $cor-principal;
+			}
 		}
 	}
 
-	&.ofertar {
-		background-color: lighten($verde, 10%);
-		line-height: 150px;
-		font-size: 1.5rem;
-		color: #ffffff;
+	&.btn-slide {
+		background-color: #ffffff;
+		font-size: .7rem;
+		color: #000;
+		display: inline-block;
+		border: none;
+		height: 40px;
+		line-height: 40px;
+		padding: 0 35px;
+		margin-top: 30px;
+
+		&:hover {
+			background-color: $cor-principal;
+			color: #ffffff;
+		}
+	}
+
+	&.saiba-mais-inline {
 		display: block;
-		height: 150px;
+		color: $cor-txt;
+		height: auto;
+		line-height: normal;
+		width: 110px;
+		margin: 6px auto 0;
+		font-size: .6rem;
 		border: none;
 
 		i {
-			color: #ffffff;
+			color: $cor-txt;
 		}
 
 		&:hover {
-			background-color: $verde;
+			color: $cor-principal;
+			background-color: transparent;
+
+			i {
+				color: $cor-principal;
+			}
 		}
 	}
 
-
-	&.btn-igreja {
-		background-color: $verde;
-		color: #ffffff;
+	&.saiba-mais-box {
+		display: block;
+		color: $cor-txt;
+		height: auto;
+		width: 300px;
+		margin: 50px auto 0;
+		font-size: .8rem;
+		border-color: $cor-txt;
+		padding: 0;
+		line-height: 45px;
 
 		i {
-			color: #ffffff;
+			color: $cor-txt;
+			padding: 0 10px 0 0;
+			position: relative;
+			top: 2px;
+			font-size: 1.225rem;
 		}
 
 		&:hover {
-			background-color: darken($verde, 10%);
+			color: #ffffff;
+			background-color: $cor-principal;
+			border-color: $cor-principal;
+
+			i {
+				color: #ffffff;
+				border-color: $cor-principal;
+			}
+		}
+	}
+
+	&.send-box-destaque {
+		display: block;
+		color: #ffffff;
+		height: auto;
+		width: 300px;
+		margin: 50px auto 0;
+		font-size: .8rem;
+		border-color: #ffffff;
+		padding: 0;
+		line-height: 45px;
+
+		i {
+			padding: 0 10px 0 0;
+			position: relative;
+			top: 2px;
+			color: #ffffff;
+			font-size: 1.225rem;
+		}
+
+		&:hover {
+			color: $cor-principal;
+			background-color: #ffffff;
+			border-color: #ffffff;
+
+			i {
+				color: $cor-principal;
+				border-color: #ffffff;
+			}
+		}
+	}
+
+	&.send-box-form {
+		display: block;
+		color: $cor-principal;
+		height: auto;
+		width: 180px;
+		cursor: pointer;
+		margin: 20px auto 0;
+		font-size: .8rem;
+		border-color: transparent;
+		padding: 0;
+		line-height: 45px;
+		background-color: #ffffff;
+
+		i {
+			padding: 0 10px 0 0;
+			position: relative;
+			top: 2px;
+			color: $cor-principal;
+			font-size: 1.225rem;
+		}
+
+		&:hover {
+			color: #ffffff;
+			background-color: $cor-principal;
+			border-color: #ffffff;
+
+			i {
+				color: #ffffff;
+				border-color: #ffffff;
+			}
 		}
 	}
 }

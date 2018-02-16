@@ -136,7 +136,7 @@
 		}
 
 		scroll_body = jQuery(window).scrollTop();
-		if(scroll_body > 100){
+		if(scroll_body > 180){
 			jQuery('.header').addClass('scroll_menu');
 		}
 	});	
@@ -155,7 +155,7 @@
 
 	jQuery(window).scroll(function(){
 		scroll_body = jQuery(window).scrollTop();
-		if(scroll_body > 200){
+		if(scroll_body > 180){
 			jQuery('.header').addClass('scroll_menu');
 		}else{
 			jQuery('.header').removeClass('scroll_menu');
@@ -190,7 +190,7 @@
 
 		<div class="topbar">
 			<div class="container">
-				<p>Entre em contato conosco 0800 123 4567 ou <a href="mailto:info@semnome.com" target="_blank">info@semnome.com</a></p>
+				<p>Entre em contato conosco <?php the_field('telefone', 'option'); ?> ou <a href="mailto:<?php the_field('email', 'option'); ?>" target="_blank"><?php the_field('email', 'option'); ?></a></p>
 				<?php if( have_rows('redes_sociais','option') ): ?>
 					<div class="redes">						
 						<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
